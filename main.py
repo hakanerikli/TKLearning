@@ -5,7 +5,7 @@ window.title("Python Tkinter")
 window.minsize(700, 500)
 
 def click_button():
-    print("Button Clicked!")
+    print(my_entry.get())
 
 
 # label
@@ -17,5 +17,8 @@ my_label.pack()
 my_button = tkinter.Button(text="Gönder", command=click_button)
 my_button.pack()
 
+# Entry
+my_entry = tkinter.Entry(width=20)
+my_entry.pack()
 
 window.mainloop()
