@@ -11,14 +11,16 @@ def click_button():
 # label
 my_label = tkinter.Label(text="Hello Tkinkter", font=("Arial",30, "normal"))
 # my_label.config(bg="black", fg="white")
-my_label.pack()
+# my_label.pack(side="right")
+my_label.place(x=0, y=0)
 
 # Button
-my_button = tkinter.Button(text="Gönder", command=click_button)
-my_button.pack()
+my_button = tkinter.Button(text="Gönder", command=click_button, width=30)
+# my_button.pack(side="right")
+my_button.place(x=100, y=100)
 
 # Entry
 my_entry = tkinter.Entry(width=20)
-my_entry.pack()
+# my_entry.pack(side="right")
 
 window.mainloop()
