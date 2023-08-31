@@ -24,4 +24,13 @@ entry.pack()
 text = Text(width=30, height=5)
 text.pack()
 
+# scale
+
+def scale_selected(value):
+    print(value)
+
+my_scale = Scale(from_=0, to=50, command=scale_selected)
+my_scale.pack()
+
+
 window.mainloop()
