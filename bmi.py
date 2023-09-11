@@ -1,3 +1,4 @@
+import math
 from tkinter import *
 tk = Tk()
 tk.title("BMI Calculation")
@@ -35,7 +36,7 @@ def button_click():
             print(bmi)
             match bmi:
                 case bmi if bmi < 18.5:
-                    label_BMI.config(text=label_BMI.text + bmi_status[0])
+                    label_BMI.config(text=bmi_status[0])
                 case bmi if bmi > bmi_values[0] and bmi < bmi_values[1]:
                     label_BMI.config(text=bmi_status[1])
                 case bmi if bmi > bmi_values[1] and bmi < bmi_values[2]:
@@ -46,9 +47,9 @@ def button_click():
                     label_BMI.config(text=bmi_status[4])
 
                 case bmi if bmi > bmi_values[5]:
-                    label_BMI.config(text=bmi_status[5])
+                    label_BMI.config(text= str(math.floor(bmi)) + bmi_status[5])
         except:
-                label_BMI.config(text="Enter a valid number")
+            label_BMI.config(text="Enter a valid number")
 
 
 
